@@ -8,12 +8,13 @@ npm install
 
 <!-- Copy and past env file -->
 
-````bash
+```bash
 cp .env.example .env
-``
+```
 
-# Run project
-``` bash
+<!-- Run application on local -->
+
+```bash
 npm run dev
 ``
-````
+```
