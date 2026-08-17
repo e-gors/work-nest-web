@@ -1,20 +1,19 @@
 # Application Setup
 
-<!-- install all libraries -->
+1. Install all libraries
 
 ```bash
 npm install
 ```
 
-<!-- Copy and past env file -->
+2. Copy and past env file
 
 ```bash
 cp .env.example .env
 ```
 
-<!-- Run application on local -->
+3. Run application on local
 
 ```bash
 npm run dev
-``
 ```
