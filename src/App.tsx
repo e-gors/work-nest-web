@@ -1,12 +1,14 @@
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import PageNotFound from "./lib/PageNotFound";
+import PublicLayout from "./components/PublicLayout";
 
 function App() {
   return (
-    <div className="homepage">
-      <Navbar />
-      <Footer />
-    </div>
+    <Routes>
+      <Route element={<PublicLayout />}></Route>
+      {/* Public routes */}
+      <Route path="/*" element={<PageNotFound />} />
+    </Routes>
   );
 }
 
