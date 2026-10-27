@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Wrench, Users, ArrowLeft, MapPin, Upload, Camera } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Field from "./Field";
+import InputField from "../../../components/InputField";
 import RoleChoice from "./RoleChoice";
 
 const inputCls =
@@ -71,21 +71,21 @@ export default function Register() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-4">
-            <Field label="Full Name" required>
+            <InputField label="Full Name" required>
               <input className={inputCls} placeholder="John Doe" />
-            </Field>
-            <Field label="Email Address" required>
+            </InputField>
+            <InputField label="Email Address" required>
               <input
                 type="email"
                 className={inputCls}
                 placeholder="you@example.com"
               />
-            </Field>
-            <Field label="Mobile Number" required>
+            </InputField>
+            <InputField label="Mobile Number" required>
               <input className={inputCls} placeholder="+1 (555) 000-0000" />
-            </Field>
+            </InputField>
             {role === "worker" && (
-              <Field label="Skills / Profession" required>
+              <InputField label="Skills / Profession" required>
                 <select className={inputCls}>
                   <option>Select your profession</option>
                   <option>Electrician</option>
@@ -95,43 +95,43 @@ export default function Register() {
                   <option>Mechanic</option>
                   <option>Other</option>
                 </select>
-              </Field>
+              </InputField>
             )}
-            <Field label="Password" required>
+            <InputField label="Password" required>
               <input
                 type="password"
                 className={inputCls}
                 placeholder="••••••••"
               />
-            </Field>
-            <Field label="Confirm Password" required>
+            </InputField>
+            <InputField label="Confirm Password" required>
               <input
                 type="password"
                 className={inputCls}
                 placeholder="••••••••"
               />
-            </Field>
+            </InputField>
           </div>
 
           {role === "worker" && (
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
-              <Field label="Years of Experience" required>
+              <InputField label="Years of Experience" required>
                 <input type="number" className={inputCls} placeholder="5" />
-              </Field>
-              <Field label="Service Radius (km)" required>
+              </InputField>
+              <InputField label="Service Radius (km)" required>
                 <input type="number" className={inputCls} placeholder="10" />
-              </Field>
-              <Field label="Hourly Rate ($)" hint="Optional">
+              </InputField>
+              <InputField label="Hourly Rate ($)" hint="Optional">
                 <input type="number" className={inputCls} placeholder="35" />
-              </Field>
-              <Field label="Certifications" hint="Optional">
+              </InputField>
+              <InputField label="Certifications" hint="Optional">
                 <input
                   className={inputCls}
                   placeholder="e.g. Licensed Electrician"
                 />
-              </Field>
+              </InputField>
               <div className="sm:col-span-2">
-                <Field
+                <InputField
                   label="Bio"
                   hint="Tell customers about yourself and your expertise"
                 >
@@ -140,10 +140,10 @@ export default function Register() {
                     className={inputCls}
                     placeholder="I'm a certified professional with..."
                   />
-                </Field>
+                </InputField>
               </div>
               <div className="sm:col-span-2">
-                <Field label="Available Schedule">
+                <InputField label="Available Schedule">
                   <div className="flex flex-wrap gap-2">
                     {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map(
                       (d) => (
@@ -157,25 +157,25 @@ export default function Register() {
                       ),
                     )}
                   </div>
-                </Field>
+                </InputField>
               </div>
             </div>
           )}
 
           {role === "customer" && (
             <div className="mt-6 grid sm:grid-cols-2 gap-4">
-              <Field label="Address" required>
+              <InputField label="Address" required>
                 <input className={inputCls} placeholder="123 Main Street" />
-              </Field>
-              <Field label="City" required>
-                <input className={inputCls} placeholder="Springfield" />
-              </Field>
+              </InputField>
+              <InputField label="City" required>
+                <input className={inputCls} placeholder="SpringInputfield" />
+              </InputField>
             </div>
           )}
 
           {/* GPS location */}
           <div className="mt-6">
-            <Field
+            <InputField
               label="GPS Location"
               required
               hint="We use this to verify you're in our service area and find nearby matches"
@@ -183,7 +183,7 @@ export default function Register() {
               <button className="w-full flex items-center justify-center gap-2 rounded-xl border-2 border-dashed border-primary/30 bg-primary/5 py-4 text-sm font-medium text-primary hover:bg-primary/10 transition-colors">
                 <MapPin className="h-5 w-5" /> Detect my location
               </button>
-            </Field>
+            </InputField>
           </div>
 
           <label className="mt-6 flex items-start gap-2 cursor-pointer">
