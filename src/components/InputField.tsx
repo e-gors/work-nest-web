@@ -1,11 +1,16 @@
-interface FieldProps {
+interface InputFieldProps {
   label: string;
   children: React.ReactNode;
   required?: boolean;
   hint?: string;
 }
 
-export default function Field({ label, children, required, hint }: FieldProps) {
+export default function InputField({
+  label,
+  children,
+  required,
+  hint,
+}: InputFieldProps) {
   return (
     <div>
       <label className="block text-sm font-medium mb-1.5">
