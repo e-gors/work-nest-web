@@ -1,13 +1,12 @@
-import type { LocationState } from "@/types";
-import { Navigate, Outlet, useLocation } from "react-router-dom";
-import { isEmpty } from "lodash";
+// import type { LocationState } from "@/types";
+import { Outlet } from "react-router-dom";
 
 export default function AuthLayout() {
-  const location = useLocation();
+  //   const location = useLocation();
   //   const { session, loading } = UserAuth();
 
-  const state = location.state as LocationState | null;
-  const from = state?.from?.pathname ?? "/user/dashboard";
+  //   const state = location.state as LocationState | null;
+  //   const from = state?.from?.pathname ?? "/user/dashboard";
 
   //   if (!loading && session && !isEmpty(session)) {
   //     return <Navigate to={from} replace />;
