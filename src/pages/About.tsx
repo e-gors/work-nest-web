@@ -35,22 +35,22 @@ const values = [
 
 const team = [
   {
-    name: "Daniel Reeves",
+    name: "Efren Goron",
     role: "CEO & Founder",
     avatar: "https://i.pravatar.cc/200?u=d1",
   },
   {
-    name: "Nadia Khalil",
+    name: "Jojo Goron",
     role: "CTO",
     avatar: "https://i.pravatar.cc/200?u=d2",
   },
   {
-    name: "Marcus Lee",
+    name: "Leonardo Gumanid",
     role: "Head of Operations",
     avatar: "https://i.pravatar.cc/200?u=d3",
   },
   {
-    name: "Elena García",
+    name: "Criscilla Gumanid",
     role: "Head of Community",
     avatar: "https://i.pravatar.cc/200?u=d4",
   },
@@ -58,22 +58,22 @@ const team = [
 
 const milestones = [
   {
-    year: "2023",
+    year: "2026",
     title: "WorkNest is born",
     desc: "Started with a simple idea: connect neighbors with trusted local talent.",
   },
   {
-    year: "2024",
+    year: "2027",
     title: "10,000 workers joined",
     desc: "Expanded to 15 cities with a 4.8 average rating.",
   },
   {
-    year: "2025",
+    year: "2028",
     title: "Mobile app launched",
     desc: "Brought the full experience to iOS and Android.",
   },
   {
-    year: "2026",
+    year: "2029",
     title: "50,000+ jobs completed",
     desc: "Now serving 30+ cities with 12,000+ verified professionals.",
   },

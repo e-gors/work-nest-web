@@ -6,21 +6,24 @@ import BrowseWorkers from "./pages/BrowseWorkers";
 import AuthRouter from "./pages/auth/AuthRouter";
 import About from "./pages/About";
 import HelpCenter from "./pages/HelpCenter";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <Routes>
+      {/* public URLs */}
       <Route element={<PublicLayout />}>
         <Route path="/" element={<Landing />} />
         <Route path="/workers" element={<BrowseWorkers />} />
         <Route path="/about" element={<About />} />
         <Route path="/help" element={<HelpCenter />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
 
       {/* Auth Routes */}
       <Route path="/auth/*" element={<AuthRouter />} />
 
-      {/* Public routes */}
+      {/* Error routes */}
       <Route path="/*" element={<PageNotFound />} />
     </Routes>
   );
