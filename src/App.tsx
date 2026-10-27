@@ -8,6 +8,7 @@ import About from "./pages/About";
 import HelpCenter from "./pages/HelpCenter";
 import Contact from "./pages/Contact";
 import WorkerProfile from "./pages/WorkerProfile";
+import Chat from "./pages/Chat";
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/help" element={<HelpCenter />} />
         <Route path="/contact" element={<Contact />} />
+
         <Route path="/workers/:id" element={<WorkerProfile />} />
+        <Route path="/chat" element={<Chat />} />
       </Route>
 
       {/* Auth Routes */}
