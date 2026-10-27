@@ -55,3 +55,7 @@ export type StepProps = {
   title: string;
   desc: string;
 };
+
+export type LocationState = {
+  from?: Location;
+};

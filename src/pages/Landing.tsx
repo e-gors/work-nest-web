@@ -141,7 +141,7 @@ export default function Landing() {
                 receiving job offers from customers near you.
               </p>
               <Link
-                to="/register"
+                to="/auth/register"
                 className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-primary hover:bg-white/90 transition-colors"
               >
                 Join as a worker <ArrowRight className="h-4 w-4" />
@@ -159,7 +159,7 @@ export default function Landing() {
                 professional in minutes.
               </p>
               <Link
-                to="/register"
+                to="/auth/register"
                 className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-accent hover:bg-white/90 transition-colors"
               >
                 Get started <ArrowRight className="h-4 w-4" />
@@ -220,7 +220,7 @@ export default function Landing() {
             talent.
           </p>
           <Link
-            to="/register"
+            to="/auth/register"
             className="mt-8 inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"
           >
             Create your free account <ArrowRight className="h-4 w-4" />

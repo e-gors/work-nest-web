@@ -3,6 +3,7 @@ import PageNotFound from "./lib/PageNotFound";
 import PublicLayout from "./components/PublicLayout";
 import Landing from "./pages/Landing";
 import BrowseWorkers from "./pages/BrowseWorkers";
+import AuthRouter from "./pages/auth/AuthRouter";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/workers" element={<BrowseWorkers />} />
       </Route>
+
+      {/* Auth Routes */}
+      <Route path="/auth/*" element={<AuthRouter />} />
 
       {/* Public routes */}
       <Route path="/*" element={<PageNotFound />} />
