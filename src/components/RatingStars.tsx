@@ -5,7 +5,7 @@ interface RatingStarsProps {
   rating: number;
   size: number;
   showValue: boolean;
-  count: number | null;
+  count?: number | null;
   className?: string | null;
 }
 export default function RatingStars({
