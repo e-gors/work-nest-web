@@ -9,6 +9,7 @@ import HelpCenter from "./pages/HelpCenter";
 import Contact from "./pages/Contact";
 import WorkerProfile from "./pages/WorkerProfile";
 import Chat from "./pages/Chat";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
 
         <Route path="/workers/:id" element={<WorkerProfile />} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Route>
 
       {/* Auth Routes */}
