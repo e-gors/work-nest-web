@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import LegalShell from "@/components/legal/LegalShell";
 import LegalSection from "@/components/legal/LegalSection";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 export default function Accessibility() {
+  useScrollToTop();
   return (
     <LegalShell
       title="Accessibility Statement"

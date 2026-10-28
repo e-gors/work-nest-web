@@ -9,6 +9,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const BENEFITS = [
   {
@@ -40,6 +41,7 @@ const STEPS = [
 ];
 
 export default function FindWork() {
+  useScrollToTop();
   return (
     <div>
       <PageHero

@@ -11,6 +11,7 @@ import {
   YAxis,
 } from "recharts";
 import type { ValueType } from "recharts/types/component/DefaultTooltipContent";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const WEEKLY = [
   { week: "Sep 22", amount: 780 },
@@ -39,6 +40,7 @@ const PAYOUTS = [
 ];
 
 export default function Earnings() {
+  useScrollToTop();
   return (
     <div>
       <PageHero

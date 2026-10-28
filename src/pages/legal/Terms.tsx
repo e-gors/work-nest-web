@@ -1,7 +1,9 @@
 import LegalSection from "@/components/legal/LegalSection";
 import LegalShell from "@/components/legal/LegalShell";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 export default function Terms() {
+  useScrollToTop();
   return (
     <LegalShell
       title="Terms of Service"

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle2, Camera, BadgeCheck, Wallet } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { CATEGORIES } from "@/lib/categories";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const inputCls =
   "w-full rounded-xl border border-border bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20";
@@ -15,6 +16,8 @@ const CHECKLIST = [
 ];
 
 export default function CreateProfile() {
+  useScrollToTop();
+
   const [form, setForm] = useState({
     name: "",
     category: "",

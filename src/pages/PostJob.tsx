@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle2, Send, Clock, ShieldCheck, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import { CATEGORIES } from "@/lib/categories";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const inputCls =
   "w-full rounded-xl border border-border bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20";
@@ -18,6 +19,8 @@ const EMPTY = {
 };
 
 export default function PostJob() {
+  useScrollToTop();
+
   const [form, setForm] = useState(EMPTY);
   const [submitted, setSubmitted] = useState(false);
   const update =

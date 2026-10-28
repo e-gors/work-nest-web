@@ -9,6 +9,7 @@ import {
   Headphones,
   Building2,
 } from "lucide-react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const contactCards = [
   {
@@ -35,6 +36,8 @@ const inputCls =
   "w-full rounded-xl border border-border bg-card px-4 py-2.5 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition";
 
 export default function Contact() {
+  useScrollToTop();
+
   const [sent, setSent] = useState(false);
 
   return (

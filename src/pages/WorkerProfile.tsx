@@ -16,8 +16,11 @@ import {
 import RatingStars from "@/components/RatingStars";
 import { WORKERS, SAMPLE_REVIEWS } from "@/lib/workers";
 import { cn } from "@/lib/utils";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 export default function WorkerProfile() {
+  useScrollToTop();
+
   const { id } = useParams();
   const worker = WORKERS.find((w) => w.id === id) || WORKERS[0];
   const [saved, setSaved] = useState(false);

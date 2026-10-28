@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const PILLARS = [
   {
@@ -42,6 +43,7 @@ const RECORD = [
 ];
 
 export default function Safety() {
+  useScrollToTop();
   return (
     <div>
       <PageHero

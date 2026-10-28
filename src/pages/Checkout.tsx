@@ -6,10 +6,13 @@ import CheckoutSuccess from "@/components/checkout/CheckoutSuccess";
 import BookingDetails from "@/components/checkout/BookingDetails";
 import PaymentForm from "@/components/checkout/PaymentForm";
 import OrderSummary from "@/components/checkout/OrderSummary";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const FEE_RATE = 0.05;
 
 export default function Checkout() {
+  useScrollToTop();
+
   const { id } = useParams();
   const worker = WORKERS.find((w) => w.id === id) || WORKERS[0];
 

@@ -1,8 +1,10 @@
 import LegalSection from "@/components/legal/LegalSection";
 import LegalShell from "@/components/legal/LegalShell";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 import { Link } from "react-router-dom";
 
 export default function Privacy() {
+  useScrollToTop();
   return (
     <LegalShell
       title="Privacy Policy"

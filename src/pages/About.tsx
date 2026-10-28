@@ -9,6 +9,7 @@ import {
   Globe,
   Zap,
 } from "lucide-react";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const values = [
   {
@@ -80,6 +81,7 @@ const milestones = [
 ];
 
 export default function About() {
+  useScrollToTop();
   return (
     <div>
       {/* Hero */}

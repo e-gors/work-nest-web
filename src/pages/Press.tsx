@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Megaphone, Download, Mail, Newspaper } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const RELEASES = [
   {
@@ -34,6 +35,7 @@ const FACTS = [
 ];
 
 export default function Press() {
+  useScrollToTop();
   return (
     <div>
       <PageHero

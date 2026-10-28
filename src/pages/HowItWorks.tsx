@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const STEPS = [
   {
@@ -48,6 +49,7 @@ const FEATURES = [
 ];
 
 export default function HowItWorks() {
+  useScrollToTop();
   return (
     <div>
       <PageHero

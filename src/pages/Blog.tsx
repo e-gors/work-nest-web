@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Clock, ArrowRight, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import PageHero from "@/components/PageHero";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const POSTS = [
   {
@@ -83,6 +84,8 @@ const CATEGORIES = [
 ];
 
 export default function Blog() {
+  useScrollToTop();
+
   const [active, setActive] = useState("All");
   const [query, setQuery] = useState("");
 

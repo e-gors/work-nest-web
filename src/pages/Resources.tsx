@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const GUIDES = [
   {
@@ -63,6 +64,7 @@ const ARTICLES = [
 ];
 
 export default function Resources() {
+  useScrollToTop();
   return (
     <div>
       <PageHero

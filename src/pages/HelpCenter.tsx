@@ -11,6 +11,7 @@ import {
   Users,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const categories = [
   {
@@ -79,6 +80,8 @@ const faqs = [
 ];
 
 export default function HelpCenter() {
+  useScrollToTop();
+
   const [query, setQuery] = useState("");
   const [openFaq, setOpenFaq] = useState(0);
 

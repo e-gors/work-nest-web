@@ -17,8 +17,10 @@ import { STEPS } from "@/lib/steps";
 import { testimonials } from "@/lib/testimonials";
 import StatsCard from "@/components/StatsCard";
 import CategoryCard from "@/components/CategoryCard";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 export default function Landing() {
+  useScrollToTop();
   return (
     <div>
       {/* Hero */}

@@ -6,6 +6,7 @@ import { CATEGORIES } from "@/lib/categories";
 import { WORKERS } from "@/lib/workers";
 import { cn } from "@/lib/utils";
 import type { WorkersProps } from "@/types";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -34,6 +35,8 @@ const SORT_OPTIONS = [
 const RADII = [1, 5, 10, 20, 50];
 
 export default function BrowseWorkers() {
+  useScrollToTop();
+
   const [query, setQuery] = useState("");
   const [activeCats, setActiveCats] = useState<string[]>([]);
   const [radius, setRadius] = useState(20);

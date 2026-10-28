@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const ROLES = [
   {
@@ -73,6 +74,7 @@ const PERKS = [
 ];
 
 export default function Careers() {
+  useScrollToTop();
   return (
     <div>
       <PageHero

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Star, Quote, ShieldCheck } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import RatingStars from "@/components/RatingStars";
+import { useScrollToTop } from "@/hooks/useScrollToTop";
 
 const TESTIMONIALS = [
   {
@@ -63,6 +64,7 @@ const STATS = [
 ];
 
 export default function Reviews() {
+  useScrollToTop();
   return (
     <div>
       <PageHero
