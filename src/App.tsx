@@ -16,6 +16,17 @@ import Cookies from "./pages/legal/Cookies";
 import Checkout from "./pages/Checkout";
 import Accessibility from "./pages/legal/Accessibility";
 import Blog from "./pages/Blog";
+import Careers from "./pages/Careers";
+import CreateProfile from "./pages/CreateProfile";
+import Earnings from "./pages/Earnings";
+import FindWork from "./pages/FindWork";
+import HowItWorks from "./pages/HowItWorks";
+import PostJob from "./pages/PostJob";
+import Press from "./pages/Press";
+import Resources from "./pages/Resources";
+import Reviews from "./pages/Reviews";
+import Safety from "./pages/Safety";
+import WorkerHub from "./pages/WorkerHub";
 
 function App() {
   return (
@@ -41,6 +52,17 @@ function App() {
         <Route path="/checkout/:id" element={<Checkout />} />
 
         <Route path="/blog" element={<Blog />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/create-profile" element={<CreateProfile />} />
+        <Route path="/earnings" element={<Earnings />} />
+        <Route path="/find-work" element={<FindWork />} />
+        <Route path="/how-it-works" element={<HowItWorks />} />
+        <Route path="/post-job" element={<PostJob />} />
+        <Route path="/press" element={<Press />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/safety" element={<Safety />} />
+        <Route path="/worker-hub" element={<WorkerHub />} />
       </Route>
 
       {/* Auth Routes */}
