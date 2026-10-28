@@ -15,6 +15,7 @@ import Privacy from "./pages/legal/Privacy";
 import Cookies from "./pages/legal/Cookies";
 import Checkout from "./pages/Checkout";
 import Accessibility from "./pages/legal/Accessibility";
+import Blog from "./pages/Blog";
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
 
         <Route path="/checkout/:id" element={<Checkout />} />
+
+        <Route path="/blog" element={<Blog />} />
       </Route>
 
       {/* Auth Routes */}
