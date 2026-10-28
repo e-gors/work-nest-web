@@ -14,6 +14,7 @@ import Terms from "./pages/legal/Terms";
 import Privacy from "./pages/legal/Privacy";
 import Cookies from "./pages/legal/Cookies";
 import Checkout from "./pages/Checkout";
+import Accessibility from "./pages/legal/Accessibility";
 
 function App() {
   return (
@@ -25,9 +26,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/help" element={<HelpCenter />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* Legal routes */}
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/cookies" element={<Cookies />} />
+        <Route path="/accessibility" element={<Accessibility />} />
 
         <Route path="/workers/:id" element={<WorkerProfile />} />
         <Route path="/chat" element={<Chat />} />
