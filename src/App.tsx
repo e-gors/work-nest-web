@@ -13,6 +13,7 @@ import Dashboard from "./pages/Dashboard";
 import Terms from "./pages/legal/Terms";
 import Privacy from "./pages/legal/Privacy";
 import Cookies from "./pages/legal/Cookies";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
         <Route path="/workers/:id" element={<WorkerProfile />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/dashboard" element={<Dashboard />} />
+
+        <Route path="/checkout/:id" element={<Checkout />} />
       </Route>
 
       {/* Auth Routes */}
