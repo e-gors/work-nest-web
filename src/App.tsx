@@ -10,6 +10,9 @@ import Contact from "./pages/Contact";
 import WorkerProfile from "./pages/WorkerProfile";
 import Chat from "./pages/Chat";
 import Dashboard from "./pages/Dashboard";
+import Terms from "./pages/legal/Terms";
+import Privacy from "./pages/legal/Privacy";
+import Cookies from "./pages/legal/Cookies";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/help" element={<HelpCenter />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/cookies" element={<Cookies />} />
 
         <Route path="/workers/:id" element={<WorkerProfile />} />
         <Route path="/chat" element={<Chat />} />
