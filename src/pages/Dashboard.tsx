@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   LayoutDashboard,
@@ -14,11 +14,54 @@ import {
   Plus,
   Calendar,
   ChevronRight,
+  type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import WorkerCalendar from "@/components/dashboard/WorkerCalendar";
+import MyJobsPanel from "@/components/dashboard/MyJobsPanel";
+import SavedWorkersPanel from "@/components/dashboard/SavedWorkersPanel";
+import MessagesPanel from "@/components/dashboard/MessagesPanel";
+import NotificationsPanel from "@/components/dashboard/NotificationsPanel";
+import ProfilePanel from "@/components/dashboard/ProfilePanel";
+import SettingsPanel from "@/components/dashboard/SettingsPanel";
 
-const navItems = [
+const PAGE_META = {
+  overview: {
+    title: "Welcome back, Alex 👋",
+    sub: "Here's what's happening with your projects.",
+  },
+  calendar: {
+    title: "Booking Calendar",
+    sub: "Manage your availability and visualize upcoming bookings.",
+  },
+  jobs: { title: "My Jobs", sub: "Track and manage all your booked services." },
+  favorites: {
+    title: "Saved Workers",
+    sub: "Your shortlisted professionals, ready to hire.",
+  },
+  messages: { title: "Messages", sub: "Stay in touch with your workers." },
+  notifications: {
+    title: "Notifications",
+    sub: "All your recent updates in one place.",
+  },
+  profile: {
+    title: "My Profile",
+    sub: "Keep your personal information up to date.",
+  },
+  settings: {
+    title: "Settings",
+    sub: "Manage your preferences and account security.",
+  },
+};
+
+type PageKey = keyof typeof PAGE_META;
+
+const navItems: {
+  id: PageKey;
+  label: string;
+  icon: LucideIcon;
+  badge?: number;
+}[] = [
   { id: "overview", label: "Overview", icon: LayoutDashboard },
   { id: "messages", label: "Messages", icon: MessageCircle, badge: 3 },
   { id: "notifications", label: "Notifications", icon: Bell, badge: 5 },
@@ -89,7 +132,7 @@ const recentActivity = [
 ];
 
 export default function Dashboard() {
-  const [active, setActive] = useState("overview");
+  const [active, setActive] = useState<PageKey>("overview");
 
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
@@ -146,19 +189,46 @@ export default function Dashboard() {
         <div className="flex-1 min-w-0">
           <div className="mb-6">
             <h1 className="font-heading text-2xl sm:text-3xl font-bold">
-              {active === "calendar"
-                ? "Booking Calendar"
-                : "Welcome back, Alex 👋"}
+              {PAGE_META[active]?.title}
             </h1>
             <p className="mt-1 text-muted-foreground">
-              {active === "calendar"
-                ? "Manage your availability and visualize upcoming bookings."
-                : "Here's what's happening with your projects."}
+              {PAGE_META[active]?.sub}
             </p>
           </div>
 
+          {/* Mobile tab bar */}
+          <nav className="lg:hidden -mx-4 px-4 mb-5 flex gap-2 overflow-x-auto no-scrollbar pb-1">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => setActive(item.id)}
+                className={cn(
+                  "inline-flex items-center gap-2 shrink-0 rounded-full border px-3.5 py-2 text-xs font-medium transition-colors",
+                  active === item.id
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : "border-border bg-card text-muted-foreground",
+                )}
+              >
+                <item.icon className="h-3.5 w-3.5" />
+                {item.label}
+              </button>
+            ))}
+          </nav>
+
           {active === "calendar" ? (
             <WorkerCalendar />
+          ) : active === "jobs" ? (
+            <MyJobsPanel />
+          ) : active === "favorites" ? (
+            <SavedWorkersPanel />
+          ) : active === "messages" ? (
+            <MessagesPanel />
+          ) : active === "notifications" ? (
+            <NotificationsPanel />
+          ) : active === "profile" ? (
+            <ProfilePanel />
+          ) : active === "settings" ? (
+            <SettingsPanel />
           ) : (
             <>
               {/* Stats */}
@@ -294,12 +364,12 @@ export default function Dashboard() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/profile"
+                  <button
+                    onClick={() => setActive("profile")}
                     className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all"
                   >
                     Complete profile <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  </button>
                 </div>
               </div>
 
