@@ -41,9 +41,9 @@ const columns = [
   {
     title: "Legal",
     links: [
-      { label: "Privacy Policy", to: "/privacy-policy" },
-      { label: "Terms of Service", to: "/terms-of-service" },
-      { label: "Cookie Policy", to: "/cookie-policy" },
+      { label: "Privacy Policy", to: "/privacy" },
+      { label: "Terms of Service", to: "/terms" },
+      { label: "Cookie Policy", to: "/cookies" },
       { label: "Accessibility", to: "/accessibility" },
     ],
   },
