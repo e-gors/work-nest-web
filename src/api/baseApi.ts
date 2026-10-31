@@ -67,6 +67,6 @@ export const baseApi = createApi({
       await sleep(delay, signal);
     },
   }),
-  tagTypes: ["Projects"],
+  tagTypes: ["Users"],
   endpoints: () => ({}),
 });
